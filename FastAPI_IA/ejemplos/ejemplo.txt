@@ -1,0 +1,81 @@
+# Uso del Microservicio de Cálculo Ambiental
+Documentación corta, clara y directa sobre cómo usar la API cuando los datos vienen de Roboflow.
+
+# 1. Flujo general
+Foto → Roboflow detecta objetos → Flutter procesa y agrupa → API recibe datos → Calcula impacto ambiental.
+
+# 2. Ejemplo de salida de Roboflow
+Roboflow devuelve detecciones individuales de objetos.
+Ejemplo:
+[
+  {"class": "botella_plastico"},
+  {"class": "botella_plastico"},
+  {"class": "lata_aluminio"}
+]
+
+# 3. Conversión al formato que requiere la API
+La API necesita datos agrupados por tipo de material.
+Ejemplo convertido:
+{
+  "detecciones": [
+    {"material": "botella_plastico", "cantidad": 2},
+    {"material": "lata_aluminio", "cantidad": 1}
+  ]
+}
+
+# 4. Código en Flutter para agrupar detecciones de Roboflow
+List<Map<String, dynamic>> procesarDeteccionesRoboflow(List<dynamic> detecciones) {
+  final conteo = <String, int>{};
+  for (var d in detecciones) {
+    final material = d['class'];
+    conteo[material] = (conteo[material] ?? 0) + 1;
+  }
+  return conteo.entries.map((e) => {
+    "material": e.key,
+    "cantidad": e.value
+  }).toList();
+}
+
+# 5. Enviar datos a la API desde Flutter
+Future<Map<String, dynamic>> calcularImpactoAmbiental(List<Map<String, dynamic>> datos) async {
+  final url = Uri.parse('http://TU_IP:8000/calcular-impacto');
+  final response = await http.post(
+    url,
+    headers: {"Content-Type": "application/json"},
+    body: jsonEncode({"detecciones": datos}),
+  );
+  if (response.statusCode == 200) {
+    return jsonDecode(response.body);
+  } else {
+    throw Exception("Error al calcular impacto");
+  }
+}
+
+# 6. Ejemplo completo
+Detecciones originales:
+[
+  {"class": "botella_plastico"},
+  {"class": "botella_plastico"},
+  {"class": "lata_aluminio"}
+]
+
+Procesamiento y envío:
+final datosParaApi = procesarDeteccionesRoboflow(deteccionesRoboflow);
+final resultado = await calcularImpactoAmbiental(datosParaApi);
+
+Imprimir resultado:
+print("Puntos: ${resultado['resumen_total']['puntos_ecologicos_totales']}");
+
+# 7. Ejemplo de respuesta de la API
+{
+  "exito": true,
+  "mensaje": "Cálculo realizado exitosamente",
+  "resumen_total": {
+    "peso_total_gramos": 150,
+    "co2_total_evitado_kg": 0.31,
+    "energia_total_ahorrada_kwh": 1.8,
+    "puntos_ecologicos_totales": 12
+  }
+}
+
+# Fin del archivo
