@@ -11,11 +11,17 @@ from PIL import Image, ImageDraw, ImageFont
 # datos de API de Roboflow
 API_KEY = "2b7LoZjjvB3oRq9ZGGCx"
 WORKSPACE = "arturo-oao7c"
-WORKFLOW_ID = "detect-count-and-visualize-2"
+
+#*detección de cantidad de objetos con falsos positivos pero mejor clasificación
+#WORKFLOW_ID = "detect-count-and-visualize-2" 
+
+#*mejor detección de cantidad de objetos pero menos preciso en clasificación (no requiere parametros de configuración)
+WORKFLOW_ID = "detect-count-and-visualize-3" 
 
 # Configuración de filtros para reducir falsos positivos en la detección
+#poner los valores que mejor funcionen según el modelo y las imágenes analizadas (poner en 0 para desactivar)
 CONFIDENCE_MIN = 0.85  # Solo detecciones con 85% o más de confianza
-AREA_MIN = 5000        # Área mínima del objeto en píxeles cuadrados (ancho × alto)
+AREA_MIN = 5000       # Área mínima del objeto en píxeles cuadrados (ancho × alto)
 
 
 def conectar_cliente():
@@ -443,3 +449,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
