@@ -18,8 +18,12 @@ WORKSPACE = "arturo-oao7c"
 #*mejor detección de cantidad de objetos pero menos preciso en clasificación (no requiere parametros de configuración)
 WORKFLOW_ID = "detect-count-and-visualize-3" 
 
+# mejor modelo de detección y precisión, no requiere para metros de configuración (estan configurados en la API)
+#WORKFLOW_ID = "detect-count-and-visualize",
+
 # Configuración de filtros para reducir falsos positivos en la detección
 #poner los valores que mejor funcionen según el modelo y las imágenes analizadas (poner en 0 para desactivar)
+#probar con 0 ya que los modelos tiene configurada la precisión en la API, ajustar parametros si no determina corretcamente.
 CONFIDENCE_MIN = 0.85  # Solo detecciones con 85% o más de confianza
 AREA_MIN = 5000       # Área mínima del objeto en píxeles cuadrados (ancho × alto)
 
@@ -449,4 +453,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
