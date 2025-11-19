@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(flutter analyze:*)",
+      "Bash(flutter pub get:*)",
+      "Bash(flutter run:*)",
+      "Bash(flutter clean:*)",
+      "Bash(nul)",
+      "Bash(findstr:*)",
+      "Bash(del libcoredatabaseservicio_base_datos.dart)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

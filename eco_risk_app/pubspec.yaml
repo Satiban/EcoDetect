@@ -1,0 +1,35 @@
+name: eco_risk_app
+description: "Aplicación para detectar contaminación mediante análisis de imágenes"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Gestión de estado simple y eficiente
+  provider: ^6.1.1
+
+  # Selección de imágenes desde cámara/galería
+  image_picker: ^1.0.7
+
+  # Almacenamiento local
+  shared_preferences: ^2.2.2
+
+  # Conversión de fecha/hora
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets de la aplicación
+  assets:
+    - assets/insignias.json

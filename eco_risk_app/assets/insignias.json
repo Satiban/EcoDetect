@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "insignias": [
+    {
+      "id": "primer_analisis",
+      "tipo": "primerAnalisis",
+      "nombre": "Primer Paso",
+      "descripcion": "Realizaste tu primer análisis de contaminación",
+      "icono": "eco_outlined",
+      "color": "#4CAF50",
+      "metaProgreso": 1,
+      "categoria": "analisis"
+    },
+    {
+      "id": "analisis_5",
+      "tipo": "analisis5",
+      "nombre": "Explorador Ecológico",
+      "descripcion": "Completaste 5 análisis de contaminación",
+      "icono": "explore",
+      "color": "#66BB6A",
+      "metaProgreso": 5,
+      "categoria": "analisis"
+    },
+    {
+      "id": "analisis_10",
+      "tipo": "analisis10",
+      "nombre": "Investigador Ambiental",
+      "descripcion": "Completaste 10 análisis de contaminación",
+      "icono": "science",
+      "color": "#26A69A",
+      "metaProgreso": 10,
+      "categoria": "analisis"
+    },
+    {
+      "id": "analisis_25",
+      "tipo": "analisis25",
+      "nombre": "Experto en Detección",
+      "descripcion": "Completaste 25 análisis de contaminación",
+      "icono": "psychology",
+      "color": "#00897B",
+      "metaProgreso": 25,
+      "categoria": "analisis"
+    },
+    {
+      "id": "analisis_50",
+      "tipo": "analisis50",
+      "nombre": "Maestro Ambiental",
+      "descripcion": "Completaste 50 análisis de contaminación",
+      "icono": "military_tech",
+      "color": "#FFB300",
+      "metaProgreso": 50,
+      "categoria": "analisis"
+    },
+    {
+      "id": "detector_experto",
+      "tipo": "detectorExperto",
+      "nombre": "Detector Experto",
+      "descripcion": "Detectaste contaminación de alto riesgo 3 veces",
+      "icono": "warning_amber",
+      "color": "#FF6F00",
+      "metaProgreso": 3,
+      "categoria": "especial"
+    },
+    {
+      "id": "guardian_verde",
+      "tipo": "guardianVerde",
+      "nombre": "Guardián Verde",
+      "descripcion": "Identificaste zonas limpias 10 veces",
+      "icono": "park",
+      "color": "#2E7D32",
+      "metaProgreso": 10,
+      "categoria": "especial"
+    },
+    {
+      "id": "cazador_plasticos",
+      "tipo": "cazadorPlasticos",
+      "nombre": "Cazador de Plásticos",
+      "descripcion": "Detectaste contaminación por plásticos 5 veces",
+      "icono": "delete_outline",
+      "color": "#1976D2",
+      "metaProgreso": 5,
+      "categoria": "especial"
+    },
+    {
+      "id": "defensor_agua",
+      "tipo": "defensorAgua",
+      "nombre": "Defensor del Agua",
+      "descripcion": "Analizaste fuentes de agua 7 veces",
+      "icono": "water_drop",
+      "color": "#0288D1",
+      "metaProgreso": 7,
+      "categoria": "especial"
+    },
+    {
+      "id": "protector_aire",
+      "tipo": "protectorAire",
+      "nombre": "Protector del Aire",
+      "descripcion": "Detectaste contaminación atmosférica 5 veces",
+      "icono": "air",
+      "color": "#5E35B1",
+      "metaProgreso": 5,
+      "categoria": "especial"
+    }
+  ]
+}
