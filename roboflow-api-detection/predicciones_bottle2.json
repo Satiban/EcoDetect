@@ -1,0 +1,28 @@
+{
+  "imagen_analizada": "bottle2.jpeg",
+  "total_objetos_detectados": 2,
+  "predicciones": [
+    {
+      "width": 150.9976348876953,
+      "height": 377.412841796875,
+      "x": 189.28499603271484,
+      "y": 503.49810791015625,
+      "confidence": 0.8820145130157471,
+      "class_id": 0,
+      "class": "botella_plastico",
+      "detection_id": "5ff8d50f-6334-4100-9920-844a2955fd51",
+      "parent_id": "image"
+    },
+    {
+      "width": 180.92041778564453,
+      "height": 386.17974853515625,
+      "x": 165.68645858764648,
+      "y": 728.7782897949219,
+      "confidence": 0.876514196395874,
+      "class_id": 0,
+      "class": "botella_plastico",
+      "detection_id": "3ef56f45-2e91-4fd7-94fc-b38fa6777478",
+      "parent_id": "image"
+    }
+  ]
+}

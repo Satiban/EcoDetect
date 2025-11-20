@@ -59,3 +59,13 @@ def obtener_recompensas():
         return resultado
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error al obtener recompensas: {str(e)}")
+
+if __name__ == "__main__":
+    import uvicorn
+    print("\n" + "="*70)
+    print("🎁 API DE RECOMPENSAS - EcoDetect")
+    print("="*70)
+    print("🔗 Ejecutándose en: http://localhost:8001")
+    print("📊 Endpoint: GET /recompensas")
+    print("="*70 + "\n")
+    uvicorn.run(app, host="0.0.0.0", port=8001)

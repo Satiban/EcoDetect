@@ -1,0 +1,15 @@
+{
+  "imagen_analizada": "bottle2.jpeg",
+  "fecha_analisis": "2025-11-18",
+  "conteo_por_tipo": {
+    "botellas_plastico": 2,
+    "botellas_vidrio": 0,
+    "latas_aluminio": 0
+  },
+  "total_objetos": 2,
+  "desglose_porcentual": {
+    "botellas_plastico": "100.0%",
+    "botellas_vidrio": "0.0%",
+    "latas_aluminio": "0.0%"
+  }
+}
